@@ -95,7 +95,7 @@ Lists the files and directories in the current directory.
   ls -la or ls -al
   ```
 
-### `echo`
+### `echo` command:
 
 The echo command in Linux is used to display a line of text or a variable's value to the terminal.
 
@@ -143,7 +143,7 @@ The rmdir dirName command removes the empty directory named dirName
 rmdir dirName
 ```
 
-### `cat`
+### `cat` command:
 
 The cat command in Linux is used to concatenate and display the contents of files.
 
@@ -154,5 +154,3 @@ cat nameOfFile
 ### `cp`
 
 ### `mv`
-
-### `grep`
