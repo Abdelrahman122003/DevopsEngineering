@@ -1,36 +1,71 @@
-> # Linux Commands
+> # Basic Commands
 
-### `mkdir` command:
+### `history` command:
 
-The mkdir command in Linux is used to create new directories.
+The history command displays a list of previously executed commands in the current shell session, providing a chronological record of commands for reference or reuse
 
 ```shell
-mkdir nameOfDirectory
+history
+```
+
+### `--help` command:
+
+The commandName --help command displays a summary of usage information and available options for the specified command, helping users understand how to use it
+
+```shell
+commandName --help
+```
+
+### `type` command:
+
+The type command displays all locations and types (e.g., alias, function, executable file) of the specified command within the current shell session.
+
+```shell
+type -a commandName
+```
+
+### `man` command:
+
+The man command in Linux is used to display the manual pages for other commands and programs, providing detailed information and usage instructions.
+
+```shell
+man ofCommand(like ls and rm)
+```
+
+### `pwd` command:
+
+The pwd command prints the absolute path of the current working directory in the terminal.
+
+```shell
+pwd
 ```
 
 ### `cd` command:
 
 The cd command in Linux is used to change the current working directory
 
-```shell
-cd path
-```
+- The cd . command changes the current directory to itself, effectively doing nothing and leaving you in the same directory.
+  ```shell
+  cd .
+  ```
+- The cd .. command changes the current directory to the parent directory of the current location.
 
-### `touch` command:
+  ```shell
+  cd ..
+  ```
 
-The touch command in Linux is used to create empty files or update the access and modification timestamps of existing files.
+- The cd path command changes the current directory to the specified path, which can be either an absolute or relative path to a directory.
 
-```shell
-touch
-```
+  ```shell
+  cd path
+  ```
 
-### `rm` command:
+- The cd ~ or simply cd command changes the current directory to the user's home directory.
 
-The rm command in Linux is used to remove files or directories
-
-```shell
-rm nameOfDirectoryOrFile
-```
+  ```shell
+  cd ~
+  cd
+  ```
 
 ### `ls` command:
 
@@ -48,19 +83,17 @@ Lists the files and directories in the current directory.
   ls -a
   ```
 
+- The -F option with ls appends a character to each file name indicating its type: / for directories, \* for executables, @ for symbolic links, and | for FIFOs (named pipes).
+
+  ```shell
+  ls -F
+  ```
+
 - Combines detailed listing with hidden files.
 
   ```shell
   ls -la or ls -al
   ```
-
-### `man` command:
-
-The man command in Linux is used to display the manual pages for other commands and programs, providing detailed information and usage instructions.
-
-```shell
-man ofCommand(like ls and rm)
-```
 
 ### `echo`
 
@@ -68,6 +101,46 @@ The echo command in Linux is used to display a line of text or a variable's valu
 
 ```shell
 echo "hello world"
+```
+
+### `mkdir` command:
+
+The mkdir command in Linux is used to create new directories.
+
+```shell
+mkdir nameOfDirectory
+```
+
+### `touch` command:
+
+The touch command in Linux is used to create empty files or update the access and modification timestamps of existing files.
+
+```shell
+touch
+```
+
+### `rm` command:
+
+The rm command in Linux is used to remove files or directories
+
+- The rm fileName command deletes the file named fileName without prompting for confirmation
+
+  ```shell
+  rm nameOfFile
+  ```
+
+- The rm -r dirName command recursively deletes the directory dirName and all its contents, including subdirectories and files, without prompting for confirmation
+
+  ```shell
+  rm -a dirName
+  ```
+
+### `rmdir` command:
+
+The rmdir dirName command removes the empty directory named dirName
+
+```shell
+rmdir dirName
 ```
 
 ### `cat`
@@ -81,13 +154,5 @@ cat nameOfFile
 ### `cp`
 
 ### `mv`
-
-### `grep`
-
-### ``
-
-### `grep`
-
-### `grep`
 
 ### `grep`
