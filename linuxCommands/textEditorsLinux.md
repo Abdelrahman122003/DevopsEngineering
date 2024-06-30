@@ -57,3 +57,19 @@ The nano command in Linux launches a user-friendly text editor in the terminal, 
 ```shell
 nano nameOfFile
 ```
+
+### `more` command:
+
+The more command in Linux is used to view the contents of a text file one screen at a time. It allows scrolling forward through the file and provides basic navigation and search functionalities within the terminal environment.
+
+```shell
+more fileName
+```
+
+### `less` command:
+
+The less command in Linux is used to view the contents of a text file one screen at a time, allowing users to navigate forward and backward within the file using arrow keys or specific commands
+
+```shell
+less fileName
+```

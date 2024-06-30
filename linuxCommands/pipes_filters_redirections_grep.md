@@ -23,7 +23,7 @@
 
 - Standard error (from shell to terminal) -> STDERR -> INDEX 2
 
-> ## Redirection
+> ### Redirection
 
 <!-- ouput -->
 

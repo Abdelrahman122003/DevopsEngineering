@@ -1,5 +1,13 @@
 > # Basic Commands
 
+### `which` command:
+
+The which command in Linux is used to locate the executable file associated with a given command by searching the directories listed in the user's PATH environment variable.
+
+```shell
+which commandName
+```
+
 ### `history` command:
 
 The history command displays a list of previously executed commands in the current shell session, providing a chronological record of commands for reference or reuse
@@ -89,6 +97,12 @@ Lists the files and directories in the current directory.
   ls -F
   ```
 
+- The -i option in the ls command is used to display the inode number of each file. The inode number is a unique identifier for each file within a file system
+
+  ```shell
+  ls -i
+  ```
+
 - Combines detailed listing with hidden files.
 
   ```shell
@@ -132,7 +146,7 @@ The rm command in Linux is used to remove files or directories
 - The rm -r dirName command recursively deletes the directory dirName and all its contents, including subdirectories and files, without prompting for confirmation
 
   ```shell
-  rm -a dirName
+  rm -r dirName
   ```
 
 ### `rmdir` command:
