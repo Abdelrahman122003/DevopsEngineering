@@ -74,33 +74,15 @@
 
 > ## Filters
 
-### `head` command:
-
-The head command in Linux displays the first few lines of a file or standard input, defaulting to the first 10 lines.
-
-```shell
-head fileName.txt
-```
-
-- `-n`: Displays the first NUM lines instead of the default 10.
-
-### `tail` command:
-
-The tail command in Linux displays the last few lines of a file or standard input, defaulting to the last 10 lines.
-
-```shell
-last fileName.txt
-```
-
-- `-n NUM`: Displays the last NUM lines instead of the default 10.
-
 ### `wc` command:
 
 - `-l`:
 - `-w`:
 - `-c`:
 
-> ## `grep` command:
+> ## Logs
+
+### `grep` command:
 
 The grep command in Linux is used to search for patterns within files. It stands for "Global Regular Expression Print".
 
@@ -122,3 +104,43 @@ The grep command in Linux is used to search for patterns within files. It stands
 - `-n` (Line Number): Displays line numbers with output lines.
 - `-c` (Count): Counts the number of matching lines.
 - `-H` (Print Filename): Prints the filename for each match(Displays matching lines with filenames).
+
+### `head` command:
+
+The head command in Linux displays the first few lines of a file or standard input, defaulting to the first 10 lines.
+
+```shell
+head fileName.txt
+```
+
+- `-n`: Displays the first NUM lines instead of the default 10.
+
+### `tail` command:
+
+The tail command in Linux displays the last few lines of a file or standard input, defaulting to the last 10 lines.
+
+```shell
+last fileName.txt
+```
+
+- `-n NUM`: Displays the last NUM lines instead of the default 10.
+
+### `watch` command:
+
+The benefit of using the watch command is that it allows you to automatically and continuously execute a command at regular intervals, making it easy to monitor changes in real-time without manually re-running the command.
+
+```shell
+watch -n 10 tail /var/log/syslog
+```
+
+### `awk` command:
+
+The awk command in Unix-like operating systems is a powerful text-processing utility. It is used to manipulate data and generate reports. It scans a file line by line, splits each line into fields, and processes them according to the instructions provided in a script or directly in the command line.
+
+```shell
+awk  '{print $1, $2, $5}'
+```
+
+### `sed` command:
+
+The sed command in Unix-like operating systems is a powerful stream editor used for performing basic text transformations on an input stream (a file or input from a pipeline). Its primary use is for search and replace, but it can also perform other text manipulations such as deletion, insertion, and substitution.

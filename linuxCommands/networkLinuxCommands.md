@@ -150,3 +150,19 @@ Displays network connections, routing tables, interface statistics, and more.
   ```shell
   netstat -t
   ```
+
+### `dig` command:
+
+The dig (Domain Information Groper) command is a network administration tool used for querying DNS (Domain Name System) name servers. It is used to perform DNS lookups and troubleshoot DNS-related issues.
+
+```shell
+dig example.com
+```
+
+### `nslookup` command:
+
+The nslookup command is a network administration tool used for querying the Domain Name System (DNS) to obtain domain name or IP address mapping information
+
+```shell
+nslookup example.com
+```
