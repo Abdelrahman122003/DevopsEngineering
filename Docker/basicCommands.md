@@ -69,11 +69,39 @@ https://docs.docker.com/engine/install
    docker container prune
    ```
 
-9. Important flags
-   - `-d` flag:<br>
-     Run containers in the background to allow multiple containers to run simultaneously without keeping the terminal session busy, ensuring your terminal remains free for other commands and operations while still allowing access to the container's logs using docker logs <container_id_or_name> to see what’s happening inside the container.
+9. `attach` Command
 
-## Command for images
+   The attach command in Linux, particularly in the context of Docker, is used to connect your terminal to a running container. This allows you to view the output and interact with the container directly.
+   ![alt text](image-1.png)
+
+   ```bash
+   docker attach {CONTAINER ID, NAME}
+   ```
+
+10. Port Mapping
+
+    Port mapping is a process that allows network traffic to be redirected from one port on a host machine to a different port on a container or virtual machine.
+
+    ```bash
+    docker run -p <host_port>:<container_port> <image_name>
+    ```
+
+    - Purpose: It allows services running inside containers to be accessible from the outside world.
+    - Mechanism: It maps a port on the host to a port on the container.
+    - Example: If you map port 3000 on the host to port 80 on a container, accessing http://localhost:3000 on the host will redirect traffic to port 80 on the container, where a service (like a web server) is running.
+
+    ```bash
+    docker run -p 3000:80 nginx
+    ```
+
+- The `-p` flag in the docker run command is used to publish a container's port or a range of ports to the host. It essentially maps the specified port(s) on the host to the specified port(s) on the container.
+
+11. Important flags
+
+- `-d` flag:<br>
+  Run containers in the background to allow multiple containers to run simultaneously without keeping the terminal session busy, ensuring your terminal remains free for other commands and operations while still allowing access to the container's logs using docker logs <container_id_or_name> to see what’s happening inside the container.
+
+## Command for images(`image`)
 
 1. Run image
 
@@ -102,40 +130,17 @@ https://docs.docker.com/engine/install
    docker rmi {REPOSITORY} or {IMAGE ID}
    ```
 
-## `curl`
+## Network Command:
+
+## Storage Command:
+
+`curl`
 
 curl is a command-line tool in Linux used for transferring data to or from a server using various protocols such as HTTP, HTTPS, FTP, and more. It is widely used for interacting with web APIs, downloading files, and testing server endpoints.
 
 ```bash
 docker exec hardcore_perlman curl localhost:80
 ```
-
-## `attach`
-
-The attach command in Linux, particularly in the context of Docker, is used to connect your terminal to a running container. This allows you to view the output and interact with the container directly.
-![alt text](image-1.png)
-
-```bash
-docker attach {CONTAINER ID, NAME}
-```
-
-## Port Mapping
-
-Port mapping is a process that allows network traffic to be redirected from one port on a host machine to a different port on a container or virtual machine.
-
-```bash
-docker run -p <host_port>:<container_port> <image_name>
-```
-
-- Purpose: It allows services running inside containers to be accessible from the outside world.
-- Mechanism: It maps a port on the host to a port on the container.
-- Example: If you map port 3000 on the host to port 80 on a container, accessing http://localhost:3000 on the host will redirect traffic to port 80 on the container, where a service (like a web server) is running.
-
-```bash
-docker run -p 3000:80 nginx
-```
-
-- The `-p` flag in the docker run command is used to publish a container's port or a range of ports to the host. It essentially maps the specified port(s) on the host to the specified port(s) on the container.
 
 ## to override environment variables use this command in :
 
