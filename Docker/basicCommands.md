@@ -130,10 +130,6 @@ https://docs.docker.com/engine/install
    docker rmi {REPOSITORY} or {IMAGE ID}
    ```
 
-## Network Command:
-
-## Storage Command:
-
 `curl`
 
 curl is a command-line tool in Linux used for transferring data to or from a server using various protocols such as HTTP, HTTPS, FTP, and more. It is widely used for interacting with web APIs, downloading files, and testing server endpoints.
@@ -147,3 +143,43 @@ docker exec hardcore_perlman curl localhost:80
 ```bash
 -e variable_name=value
 ```
+
+## Network Command:
+
+1. Bridge Network:
+
+   - Default network for containers if no other network is specified.
+   - Containers on the same bridge network can communicate with each other using their IP addresses or container names.
+   - Suitable for standalone applications.
+
+   ```bash
+   # create new network
+   docker network create my-bridge-network
+   docker run --network my-bridge-network my-container
+   # create new network with some details
+   docker network create \–-driver bridge \-–subnet 182.18.0.0/16
+   custom-isolated-network
+   # Purpose:
+   # This command creates a custom bridge network named custom-isolated-network with a specified subnet of 182.18.0.0/16. Containers connected to this network can communicate with each other using IP addresses within this subnet range. This setup is useful for isolating groups of containers and managing their network configurations.
+   ```
+
+2. Host Network:
+
+   - Containers use the host’s network stack directly.
+   - No network isolation between the container and the host.
+   - Suitable for high-performance or low-latency requirements.
+
+   ```bash
+   docker run --network host my-container
+   ```
+
+3. None Network:
+
+   - Containers are isolated from all networks.
+   - Suitable for security or testing purposes where network access is not needed.
+
+   ```bash
+   docker run --network none my-container
+   ```
+
+## Storage Command:
