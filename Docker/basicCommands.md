@@ -52,7 +52,7 @@ https://docs.docker.com/engine/install
     # to run command in specific container use this command:
     docker exec {CONTAINER ID, NAMES} your_command_that_you_want
     #  to open a bash shell inside the container:
-    docker exec -it {CONTAINER ID, NAMES
+    docker exec -it {CONTAINER ID, NAMES}
     docker exec -it name-of-your-container /bin/bash
    ```
 
@@ -183,3 +183,27 @@ docker exec hardcore_perlman curl localhost:80
    ```
 
 ## Storage Command:
+
+1. `create volume`
+
+   ```bash
+   docker volume create data_volume
+   ```
+
+2. `list all volumes`
+
+   ```bash
+   docker volume ls
+   ```
+
+3. `get details of the specific volume`
+
+   ```bash
+   docker volume inspect volume_name
+   ```
+
+4. `remove volume`
+
+   ```bash
+   docker rm volume_name
+   ```
