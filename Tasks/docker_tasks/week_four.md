@@ -47,3 +47,28 @@ ls /app
 ```
 
 ![alt text](image-2.png)
+
+## Task_3
+
+**problem statement:**
+Write a docker file with a run command to create a file, build the image and run two containers from it, make them in the same custom network.
+
+```bash
+# Dockerfile
+FROM ubuntu:latest
+RUN touch file.txt
+
+# Build this Dockerfile to create an image.
+docker build -t  my_own_image .
+
+# create network
+docker network create my_cust_network
+
+# create two containers on same network
+docker run --network=my_cust_network my_own_image
+docker run --network=my_cust_network my_own_image
+```
+
+## Task_4
+
+Make a dockerfile for this app.py build and run it remove the image you just build, and then write a docker compose file containing two services, one should be for your app.py and one for nginx, use version 2 of docker compose file and modify your python code to print the IP of the machine with a hostname equal to the nginx container name.

@@ -129,6 +129,17 @@ https://docs.docker.com/engine/install
    docker image rm {REPOSITORY} or {IMAGE ID}
    docker rmi {REPOSITORY} or {IMAGE ID}
    ```
+5. Build Image
+
+   ```bash
+   # If your Dockerfile is named Dockerfile and is in the current directory, you can simply use:
+
+   docker build -t my_own_image .
+
+   # If the Dockerfile is named something else, for example, MyDockerfile, you should use:
+
+   docker build -f MyDockerfile -t my_own_image .
+   ```
 
 `curl`
 
@@ -146,64 +157,72 @@ docker exec hardcore_perlman curl localhost:80
 
 ## Network Command:
 
-1. Bridge Network:
+- Type of network when you run a container and you can create a network and use it by its name.
 
-   - Default network for containers if no other network is specified.
-   - Containers on the same bridge network can communicate with each other using their IP addresses or container names.
-   - Suitable for standalone applications.
+  1.  Bridge Network:
 
-   ```bash
-   # create new network
-   docker network create my-bridge-network
-   docker run --network my-bridge-network my-container
-   # create new network with some details
-   docker network create \–-driver bridge \-–subnet 182.18.0.0/16
-   custom-isolated-network
-   # Purpose:
-   # This command creates a custom bridge network named custom-isolated-network with a specified subnet of 182.18.0.0/16. Containers connected to this network can communicate with each other using IP addresses within this subnet range. This setup is useful for isolating groups of containers and managing their network configurations.
-   ```
+      - Default network for containers if no other network is specified.
+      - Containers on the same bridge network can communicate with each other using their IP addresses or container names.
+      - Suitable for standalone applications.
 
-2. Host Network:
+      ```bash
+      # create new network
+      docker network create my-bridge-network
+      docker run --network my-bridge-network my-container
+      # create new network with some details
+      docker network create \–-driver bridge \-–subnet 182.18.0.0/16
+      custom-isolated-network
+      # Purpose:
+      # This command creates a custom bridge network named custom-isolated-network with a specified subnet of 182.18.0.0/16. Containers connected to this network can communicate with each other using IP addresses within this subnet range. This setup is useful for isolating groups of containers and managing their network configurations.
+      ```
 
-   - Containers use the host’s network stack directly.
-   - No network isolation between the container and the host.
-   - Suitable for high-performance or low-latency requirements.
+  2.  Host Network:
 
-   ```bash
-   docker run --network host my-container
-   ```
+      - Containers use the host’s network stack directly.
+      - No network isolation between the container and the host.
+      - Suitable for high-performance or low-latency requirements.
 
-3. None Network:
+      ```bash
+      docker run --network host my-container
+      ```
 
-   - Containers are isolated from all networks.
-   - Suitable for security or testing purposes where network access is not needed.
+  3.  None Network:
 
-   ```bash
-   docker run --network none my-container
-   ```
+      - Containers are isolated from all networks.
+      - Suitable for security or testing purposes where network access is not needed.
+
+      ```bash
+      docker run --network none my-container
+      ```
+
+- To list all networks in Docker
+
+```bash
+docker network ls
+```
 
 ## Storage Command:
 
-1. `create volume`
+- `create volume`
 
-   ```bash
-   docker volume create data_volume
-   ```
+  ```bash
+  docker volume create data_volume
+  ```
 
-2. `list all volumes`
+- `list all volumes`
 
-   ```bash
-   docker volume ls
-   ```
+  ```bash
+  docker volume ls
+  ```
 
-3. `get details of the specific volume`
+- `get details of the specific volume`
 
-   ```bash
-   docker volume inspect volume_name
-   ```
+  ```bash
+  docker volume inspect volume_name
+  ```
 
-4. `remove volume`
+- `remove volume`
 
-   ```bash
-   docker rm volume_name
-   ```
+  ```bash
+  docker rm volume_name
+  ```
