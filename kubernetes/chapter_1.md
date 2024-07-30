@@ -79,4 +79,37 @@ Kubernetes manages your applications by automatically monitoring their load and 
 
 ### Control Plane components
 
+**These are the components and their functions:**
+
+- `The Kubernetes API Server` provides a way to interact with the cluster through a RESTful API. Engineers use this API to create and manage objects in Kubernetes.
+
+- `Etcd` is a storage system that saves the objects you create through the API, because the API Server itself doesn't store data. The API Server is the only part that communicates with etcd.
+
+- `The Scheduler` chooses which worker node will run each application instance.
+
+- `Controllers` manage the objects you create through the API. Most just create other objects, but some also interact with external systems, like a cloud provider
+
 ### Worker Node components
+
+**Each node runs the following set of components:**
+
+- `The Kubelet`, an agent that talks to the API server and manages the applications running on its node. It reports the status of these applications and the node via the API.
+
+- `The Container Runtime`, which can be Docker or any other runtime compatible with Kubernetes. It runs your applications in containers as instructed by the Kubelet.
+
+- `The Kubernetes Service Proxy` (Kube Proxy) load-balances network traffic between applications.
+
+## Deploying an application to Kubernetes
+
+![alt-text](./images/Deploying_an_application.png)
+
+**These actions take place when you deploy the application:**
+
+- You submit the application manifest to the Kubernetes API. The API Server writes the objects defined in the manifest to etcd.
+- A controller notices the newly created objects and creates several new objects - one for each application instance.
+- The Scheduler assigns a node to each instance.
+- The Kubelet notices that an instance is assigned to the Kubelet’s node. It runs the application instance via the Container Runtime.
+- The Kube Proxy notices that the application instances are ready to accept connections from clients and configures a load balancer for them.
+- The Kubelets and the Controllers monitor the system and keep the applications running.
+
+https://wangwei1237.github.io/Kubernetes-in-Action-Second-Edition/docs/Introducing_Kubernetes_0.html
