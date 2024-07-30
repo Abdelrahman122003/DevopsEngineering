@@ -14,7 +14,7 @@ A docker-compose.yml file is a configuration file used by Docker Compose to defi
 
 - Configuration: You can set environment variables, specify dependencies, and configure other settings for your services.
 
-## Details About Versions of docker-compose file
+## Details About Versions of docker-compose file --\_\_ > very important to talk about versions of docker compose file
 
 ## Basic Structure of a Docker Compose File
 
