@@ -181,3 +181,15 @@ Responses correspond to the pod names, with each request being routed to differe
 <p align="center">
   <img src="./images/Load_Balancer.png" alt="alt-text" width="500"/>
 </p>
+
+## Understanding why you need a service
+
+- Service Object: In Kubernetes, a Service provides a single, stable IP address to communicate with your pods, regardless of the number of replicas.
+
+- Load Balancing: A Service acts as a load balancer, distributing traffic across multiple pods if there are several, or ensuring a stable entry point even if there is only one pod.
+
+- Pod Ephemerality: Pods are ephemeral and can be replaced with new ones that have different IP addresses. This can happen due to node failures, pod deletions, or resource reallocation.
+
+- Stable Access with Services: Using a Service avoids the need to reconfigure clients when pods are replaced. The Service maintains a constant IP address, ensuring continuous access to a healthy pod and balancing the load among pods.
+
+- Client Connection: Clients should connect to the Service's IP rather than directly to individual pods, ensuring reliable and consistent access even as the underlying pods change.
