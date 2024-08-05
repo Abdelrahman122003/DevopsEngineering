@@ -111,5 +111,3 @@ Kubernetes manages your applications by automatically monitoring their load and 
 - The Kubelet notices that an instance is assigned to the Kubelet’s node. It runs the application instance via the Container Runtime.
 - The Kube Proxy notices that the application instances are ready to accept connections from clients and configures a load balancer for them.
 - The Kubelets and the Controllers monitor the system and keep the applications running.
-
-https://wangwei1237.github.io/Kubernetes-in-Action-Second-Edition/docs/Introducing_Kubernetes_0.html
