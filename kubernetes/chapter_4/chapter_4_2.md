@@ -20,7 +20,7 @@ The three Node objects and the actual cluster machines that make up the cluster.
 # Use the -o json option to display the object in JSON instead of YAML.
 sudo kubectl get node <node-name> -o yaml
 # The jq tool is very handy if you want to see only a part of the object’s structure
-sudo kubectl get node <node-name> -o yaml | jq .status.conditions
+sudo kubectl get node <node-name> -o json | jq .status.conditions
 ```
 
 ## Accessing the API directly

@@ -124,18 +124,29 @@ To access your running application, you'll need to create a Service object. Pods
 - Creating a Service
   The create deployment command that you ran previously created a Deployment object, whereas the expose deployment command creates a Service object.
 
-  ```bash
-  kubectl expose deployment kubia --type=LoadBalancer --port 8080
-  ```
+1. Service for a deployment
 
-  `Hint for you: `<br>
-  LoadBalancer: Provisions an external load balancer (if supported by your cloud provider), which assigns a public IP address to the Service, making it accessible from outside the cluster.
+   ```bash
+   # The --target-port specifies the port on which the application is running inside the pod. For example, the Nginx service runs on port 80, and you can map this to port 7008 externally.
 
-  This is what running the above command tells Kubernetes:
+   sudo kubectl expose deployment nginx1 --type=ClusterIP --port=7008 --target-port=80 --target-port=8080 and --port=8080
+   kubectl expose deployment kubia --type=LoadBalancer --port 8080
+   ```
 
-  - You want to expose all pods that belong to the kubia Deployment as a new service.
-  - You want the pods to be accessible from outside the cluster via a load balancer.
-  - The application listens on port 8080, so you want to access it via that port.
+2. Service for a pod
+
+   ```bash
+   sudo kubectl expose pod kubia-init --port=9000 --target-port=8080 --name=kubias --selector=app=kubia
+   ```
+
+`Hint for you: `<br>
+LoadBalancer: Provisions an external load balancer (if supported by your cloud provider), which assigns a public IP address to the Service, making it accessible from outside the cluster.
+
+This is what running the above command tells Kubernetes:
+
+- You want to expose all pods that belong to the kubia Deployment as a new service.
+- You want the pods to be accessible from outside the cluster via a load balancer.
+- The application listens on port 8080, so you want to access it via that port.
 
 - Listing services
 
