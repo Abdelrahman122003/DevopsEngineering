@@ -103,5 +103,7 @@ sudo kubectl describe node <node-name>
 **Inspecting a Pod object**
 
 ```bash
-sudo kubectl describe pod <node-name>
+sudo kubectl describe pod <pod-name>
+# To display the conditions of a pod, use the following command. The -A5 option means that after finding the line containing "Conditions:", the output will include five additional lines to provide context.
+kubectl describe pods <pod-name> | grep Conditions: -A5
 ```
