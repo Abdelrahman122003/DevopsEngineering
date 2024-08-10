@@ -24,6 +24,12 @@
 - [Running additional containers at pod startup](./chapter_5/5_5.md)
 - [Deleting pods and other objects](./chapter_5/5_6.md)
 
+> ## `chapter 6`
+
+- [Understanding the pod's status](./chapter_6/6_1.md)
+- [Keeping containers healthy](./chapter_6/6_2.md)
+- [](./chapter_6/6_3.md)
+
 ## `Link to the Kubernetes in Action book`:
 
 https://wangwei1237.github.io/Kubernetes-in-Action-Second-Edition/docs/Introducing_Kubernetes_0.html
