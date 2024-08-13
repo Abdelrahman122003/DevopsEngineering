@@ -28,7 +28,15 @@
 
 - [Understanding the pod's status](./chapter_6/6_1.md)
 - [Keeping containers healthy](./chapter_6/6_2.md)
-- [](./chapter_6/6_3.md)
+- [Executing actions at container start-up and shutdown](./chapter_6/6_3.md)
+- [Understanding the pod lifecycle](./chapter_6/6_4.md)
+
+> ## `chapter 7`
+
+- []()
+- []()
+- []()
+- []()
 
 ## `Link to the Kubernetes in Action book`:
 
