@@ -33,10 +33,17 @@
 
 > ## `chapter 7`
 
-- []()
-- []()
-- []()
-- []()
+- [Introducing volumes](./chapter_7/7_1.md)
+- [Using Volumes](./chapter_7/7_2.md)
+- [Integrating external storage into pods](./chapter_7/7_3.md)
+- [Accessing files on the worker node’s filesystem](./chapter_7/7_4.md)
+
+> ## `chapter 8`
+
+- [Decoupling pods from the underlying storage technology](./chapter_8/8_1.md)
+- [Creating persistent volumes and claims](./chapter_8/8_2.md)
+- [Dynamic provisioning of persistent volumes](./chapter_8/8_3.md)
+- [Node-local persistent volumes](./chapter_8/8_4.md)
 
 ## `Link to the Kubernetes in Action book`:
 
