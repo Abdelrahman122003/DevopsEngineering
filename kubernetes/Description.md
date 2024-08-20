@@ -45,6 +45,14 @@
 - [Dynamic provisioning of persistent volumes](./chapter_8/8_3.md)
 - [Node-local persistent volumes](./chapter_8/8_4.md)
 
-## `Link to the Kubernetes in Action book`:
+> ## `chapter 9`
+
+- [Setting the command, arguments, and environment variables](./chapter_9/9_1.md)
+- [Using a config map to decouple configuration from the pod](./chapter_9/9_2.md)
+- [Using Secrets to pass sensitive data to containers](./chapter_9/9_3.md)
+- [Passing pod metadata to the application via the Downward API](./chapter_9/9_4.md)
+- [Using projected volumes to combine volumes into one](./chapter_9/9_5.md)
+
+## `Link to the `Kubernetes in Action` book`:
 
 https://wangwei1237.github.io/Kubernetes-in-Action-Second-Edition/docs/Introducing_Kubernetes_0.html
