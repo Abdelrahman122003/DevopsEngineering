@@ -53,6 +53,21 @@
 - [Passing pod metadata to the application via the Downward API](./chapter_9/9_4.md)
 - [Using projected volumes to combine volumes into one](./chapter_9/9_5.md)
 
+> ## `chapter 10`
+
+- [Organizing objects into Namespaces](./chapter_10/10_1.md)
+- [Organizing pods with labels](./chapter_10/10_2.md)
+- [Filtering objects with label selectors](./chapter_10/10_3.md)
+- [Annotating objects](./chapter_10/10_4.md)
+
+> ## `chapter 11` Pending
+
+> ## `chapter 12`
+
+> ## `chapter 13` Pending
+
+> ## `chapter 14` Pending
+
 ## `Link to the `Kubernetes in Action` book`:
 
 https://wangwei1237.github.io/Kubernetes-in-Action-Second-Edition/docs/Introducing_Kubernetes_0.html

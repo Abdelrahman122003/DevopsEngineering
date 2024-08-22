@@ -129,7 +129,8 @@ To access your running application, you'll need to create a Service object. Pods
    ```bash
    # The --target-port specifies the port on which the application is running inside the pod. For example, the Nginx service runs on port 80, and you can map this to port 7008 externally.
 
-   sudo kubectl expose deployment nginx1 --type=ClusterIP --port=7008 --target-port=80 --target-port=8080 and --port=8080
+   sudo kubectl expose deployment nginx1 --type=ClusterIP --port=7008 --target-port=80
+
    kubectl expose deployment kubia --type=LoadBalancer --port 8080
    ```
 
