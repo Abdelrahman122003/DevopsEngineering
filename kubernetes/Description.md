@@ -64,6 +64,9 @@
 
 > ## `chapter 12`
 
+- [Introducing Ingresses](./chapter_12/12_1.md)
+- [Creating and using Ingress objects](./chapter_12/12_2.md)
+
 > ## `chapter 13` Pending
 
 > ## `chapter 14` Pending
