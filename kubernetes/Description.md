@@ -71,10 +71,10 @@
 
 > ## `chapter 14` Pending
 
-> ## `chapter 15` Pending
+> ## `chapter 15`
 
-- [](./chapter_15/15_1.md)
-- [](./chapter_15/15_1.md)
+- [Introducing StatefulSets](./chapter_15/15_1.md)
+- [Understanding StatefulSet behavior](./chapter_15/15_2.md)
 
 ## `Link to the `Kubernetes in Action` book`:
 
