@@ -165,6 +165,21 @@ The cat command in Linux is used to concatenate and display the contents of file
 cat nameOfFile
 ```
 
-### `cp`
+### `cp` command
 
-### `mv`
+The cp (copy) command in Linux is used to copy files and directories from one location to another.
+
+- `-r` or `--recursive`: Copy directories recursively, including all files and subdirectories.
+
+- `-v`or `--verbose`: Display detailed information about what is being copied.
+
+```s
+cp -r -v source_directory/ destination_directory/
+```
+### `mv` command
+
+The mv command in Linux is used to move or rename files and directories
+
+```s
+mv file1.txt /destination/
+```
