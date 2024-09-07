@@ -33,3 +33,30 @@ Shell expansion is a process in Unix-like operating systems where the shell inte
   ```s
   cd ~
   ```
+
+# Environment variable
+
+Environment variables are dynamic values that can affect the behavior of processes on a computer. They are used to configure system-wide or application-specific settings without hardcoding them into the software.
+
+
+Variables created in the terminal are typically not saved permanently. They are set only for the current session or until the terminal window is closed.
+
+- `export` command
+  
+  The export command is used to set an environment variable and make it available to child processes.
+
+    ```s
+    export <var-name>
+    ```
+- `declare -x` command
+  
+  - The declare -x command is used to declare and export variables in one step, making them available as environment variables
+  
+    ```s
+    declare -x name=value
+    ```
+  - This command will output a list of all environment variables that are exported, showing their names and values.
+  
+    ```s
+    declare -x
+    ```

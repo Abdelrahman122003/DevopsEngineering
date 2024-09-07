@@ -1,4 +1,4 @@
-# data streams
+# Data Streams
 
 ## Standard Streams (Data Transported from Terminal to Shell or Vice Versa)
 
@@ -76,9 +76,12 @@
 
 ### `wc` command:
 
-- `-l`:
-- `-w`:
-- `-c`:
+The wc (word count) command in Unix-like systems is used to count lines, words, and characters in files or standard input. It provides a quick way to obtain these counts, which can be useful for text processing and analysis.
+
+- `-l`: Count lines.
+- `-w`: Count words.
+- `-c`: Count characters.
+- `-L`: Display the length of the longest line.
 
 > ## Logs
 
