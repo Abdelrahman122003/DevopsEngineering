@@ -292,17 +292,69 @@ Lambda functions can invoke other Lambda functions using Amazon API Gateway to f
 **Summary**: Regions are large geographic areas with multiple AZs, which are independent locations within a region. Each AZ contains multiple data centers that house the physical hardware.
 
 
-- Edge Location: Geographically distributed data centers that deliver static content with low latency to end users.
+Amazon CloudFront: Geographically distributed data centers that deliver static content with low latency to end users.
 
 
+`Amazon CloudFront`, a CDN managed by AWS, uses edge locations to cache copies of your content, enabling faster delivery to users at any location.
+
+Location Name: Edge Location
+
+Type of Service: CDN
+
+Service Name in AWs: Amazon CloudFront
+
+## AWS Accelerate program
 
 
+The AWS Accelerate Program is designed to help organizations quickly adopt and scale their use of AWS services.
 
 
+***Not to be confused with AWS Accelerate Program!***
+
+## AWS Edge Computing Solutions
+
+- **`Amazon Global Accelerator Edge Locations`**
+
+  Amazon Global Accelerator is a service designed to improve the availability and performance of your applications for users around the world
+
+  1. Global Deployment: 
+    
+    Deploy your application in multiple AWS regions around the world to ensure redundancy and low-latency access for users.
+
+  2. Optimal Region Selection: 
+    
+    Amazon Global Accelerator uses its global network of edge locations to direct user traffic to the optimal AWS region based on factors like health, geography, and routing policies.
+
+  3. Improved Performance: 
+    
+    By leveraging the AWS global network, Global Accelerator reduces latency and improves the performance of your application by directing traffic through the AWS global backbone.
+
+  4. High Availability: 
+    
+    If there are issues in one region, Global Accelerator can automatically redirect traffic to a healthy region, enhancing the availability of your application.
 
 
+- **`AWS Outposts Edge Locations`**
 
+  AWS Outposts extend AWS infrastructure to on-premises environments, including edge locations for localized processing and storage. These are used for applications requiring low latency and local data processing.
 
+  While the hardware and software are provided and maintained by AWS, you are responsible for managing the operational aspects of the Outposts once they are installed.
+
+  The Outposts hardware is physically installed in your on-premises data center or other facilities, bringing AWS services closer to your on-premises environment.
+
+- **`Local Zone`**
+  
+  AWS Local Zones are a type of infrastructure deployment that brings AWS services closer to end-users in specific geographic locations.
+
+  Local Zones offer a subset of AWS services, such as compute, storage, and networking, allowing you to run applications that need to stay close to end-users while leveraging AWS infrastructure.
+
+  AWS is responsible for the management and maintenance of the Local Zones, including the hardware, software, and networking infrastructure.
+
+  The infrastructure is physically hosted in a specific geographic location chosen by AWS, but it is designed to serve applications in that region with reduced latency.
+
+- **`AWS Wavelength`**
+  
+  AWS Wavelength extends AWS infrastructure to telecom networks, providing ultra-low latency access for mobile and edge applications.
 
 
 
