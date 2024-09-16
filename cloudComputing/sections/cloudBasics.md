@@ -356,18 +356,56 @@ The AWS Accelerate Program is designed to help organizations quickly adopt and s
   
   AWS Wavelength extends AWS infrastructure to telecom networks, providing ultra-low latency access for mobile and edge applications.
 
+## AWS System Manager
+
+AWS Systems Manager is a service that helps manage your infrastructure on AWS and beyond. It provides a unified interface to automate operational tasks, such as managing and configuring both AWS and on-premises resources in hybrid environments
 
 
+1. `Automation`: Automates common maintenance and deployment tasks.
+2. `Run Command`: Runs scripts and commands on EC2 instances and on-premises servers without needing SSH access.
+3. `Patch Manager`: Automates patching for AWS and non-AWS resources.
 
 
+In computing, a **`patch`** refers to a small update or piece of code applied to a software program to fix bugs, improve functionality, or address security vulnerabilities.
 
 
+Fine-grained control of resources using tags.
+
+Notifications about resource deviation from policy.
+
+Can take corrective actions against resources 
+
+Remote SSH login using the browser(no need for SSH client)
+
+## AWS License Manager
+
+AWS License Manager is a service that helps you manage and track software licenses for both AWS and on-premises environments. It is used to simplify the process of tracking software usage and ensuring compliance with licensing agreements.
+
+**Key Features and Use Cases:**
+
+- `License Tracking`: Monitors usage of software licenses like Windows, SQL Server, and Oracle, ensuring compliance and preventing overuse.
+- `Automated Enforcement`: Automatically enforces licensing rules to prevent violations, such as exceeding license limits.
 
 
+- AWS License Manager allows you to import 3rd-party licenses.
 
+## AWS Certificate Manager
 
+AWS Certificate Manager (ACM) is a service that simplifies the process of provisioning, managing, and deploying SSL/TLS certificates for securing your websites, applications, and resources on AWS.
 
+- Can issue X.509 certificates signed by AWS(free for AWS services)
 
+- Can issue private X.509 certificates 
+
+- Private certificates can be used even in non-AWS enironments
+
+## AWS Managed Services(AMS)
+
+A bundle of services that AWS provides to help users manage their infrastructure on AWS 
+
+For example, organizations that want help migrate to AWS but do not have the required expertise and man power.
+
+AWS offers automated tools to help as well as human engineers.
 
 
 Navy Blue (#1E3A8A): A strong, professional color that stands out without being too harsh.
